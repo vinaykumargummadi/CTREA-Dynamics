@@ -1,5 +1,7 @@
 # CTREA-Dynamics
 
+Dataset Link : https://catalog.data.gov/dataset/real-estate-sales-2001-2018
+
 Problem Statement
 
 Connecticut, the southernmost state in the New England region of the Northeastern United States confronts a complex array of challenges and opportunities in its dynamic real estate
