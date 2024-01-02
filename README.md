@@ -2,6 +2,8 @@
 
 Dataset Link: https://catalog.data.gov/dataset/real-estate-sales-2001-2018
 
+Workflow Link: https://whimsical.com/capstone-project-mind-map-Dwg4FfHTvU4cjKEQWVU6T4 
+
 ## Problem Statement
 
 Connecticut, the southernmost state in the New England region of the Northeastern United States confronts a complex array of challenges and opportunities in its dynamic real estate landscape. Positioned strategically in proximity to major urban centres like New York City and Boston grapples with evolving real estate dynamics. The resurgence of in-person work and inflation's impact on affordability redefine housing demands. Balancing the needs of a returning workforce and addressing inflationary pressures pose challenges. Esteemed educational institutions, including Yale University, contribute to continuous housing demand. Ongoing infrastructure developments offer opportunities but require careful planning to avoid affordability issues and displacement. Low inventory, rising demand, and a positive job market further complicate the real estate landscape. Strategic interventions are essential to navigate these complexities, ensuring sustainable solutions that cater to diverse housing needs while maintaining the state's unique character.
