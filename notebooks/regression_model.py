@@ -1,15 +1,7 @@
 import streamlit as st
-import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-from sklearn.pipeline import Pipeline
-from sklearn.model_selection import train_test_split
-from xgboost import XGBRegressor
-from sklearn.compose import ColumnTransformer
-from sklearn.feature_selection import SelectKBest, f_regression
-from sklearn.preprocessing import FunctionTransformer, OneHotEncoder
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 st.header('Machine Learning Regression Model')
 list_year = st.selectbox('Property Listing Year',
@@ -57,24 +49,24 @@ st.markdown('User Inputs')
 input_data = pd.DataFrame(data)
 st.dataframe(input_data.T)
 
+if button:
+    # Define the drop_columns function
+    def drop_columns(input_data):
+        return input_data.drop(columns=columns_to_drop)
 
-# Define the drop_columns function
-def drop_columns(input_data):
-    return input_data.drop(columns=columns_to_drop)
+    # applying log transformation
+    def apply_log_transformation(input_data):
+        input_data['Assessed Value'] = np.log1p(input_data['Assessed Value'])
+        return input_data
 
-#applying log transformation
-def apply_log_transformation(input_data):
-    input_data['Assessed Value'] = np.log1p(input_data['Assessed Value'])
-    return input_data
+    columns_to_drop = ['Sales Ratio']
+    categorical_features = ['Property Type', 'County', 'Reason Category']
 
-columns_to_drop = ['Sales Ratio']
-categorical_features = ['Property Type', 'County', 'Reason Category']
-
-# deserialization
-reloaded_pickle = pickle.load(open("C:\\Users\\dhami\\Downloads\\Cap_Data\\Real_notebooks\\pipeline_model.pkl", 'rb'))
-# Use the pipeline for prediction
-prediction = reloaded_pickle.predict(input_data)
-prediction = float(prediction)
-#inverse of prediction for actual value
-predict_value = np.expm1(prediction)
-st.write(predict_value)
+    # deserialization
+    reloaded_pickle = pickle.load(open("C:\\Users\\dhami\\Downloads\\Cap_Data\\Real_notebooks\\pipeline_model.pkl", 'rb'))
+    # Use the pipeline for prediction
+    prediction = reloaded_pickle.predict(input_data)
+    prediction = float(prediction)
+    # inverse of prediction for actual value
+    predict_value = np.expm1(prediction)
+    st.write('Predicted Sale Amount:', predict_value)
