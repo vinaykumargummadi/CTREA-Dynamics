@@ -1,0 +1,22 @@
+# Data Manipulation and Analysis
+pandas
+numpy
+
+matplotlib
+seaborn
+
+# Machine Learning
+scikit-learn
+tensorflow
+torch
+xgboost
+
+# Statistical Analysis
+scipy
+statsmodels
+
+# Jupyter Notebooks
+jupyterlab
+
+# Additional Tools
+tqdm
